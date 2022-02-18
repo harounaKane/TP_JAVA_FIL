@@ -2,18 +2,21 @@ package principal;
 
 import console.ES;
 import gestionPersonne.GestionPersonne;
+import structure.TabPersonne;
 
 public class Main {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 
 		GestionPersonne gestionPers= new GestionPersonne();
+		
+		TabPersonne tabPersonne = new TabPersonne();
 		
 		int choix;
 		do {
 			choix = menuGeneral();
 			switch (choix) {
-			case 1 -> gestionPers.MenuPersonne();
+			case 1 -> gestionPers.MenuPersonne(tabPersonne);
 			case 2 -> ES.afficher("Menu inconnu");
 		
 			}
@@ -23,7 +26,7 @@ public class Main {
 
 	}
 
-	public static int menuGeneral() throws Exception {
+	public static int menuGeneral(){
 		String str = """
 				\t**** MENU GENERAL ****\n
 				1. Personne

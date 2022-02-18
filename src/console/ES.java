@@ -7,7 +7,7 @@ public class ES {
 	
 	private static Scanner sc = new Scanner(System.in);
 	
-	public static int saisir(String msg, int inf, int sup) throws Exception {
+	public static int saisir(String msg, int inf, int sup){
 		afficher(msg);
 		int choix;
 		
@@ -36,5 +36,19 @@ public class ES {
 	public static void afficher(String msg) {
 		System.out.println(msg);
 	}
+	
+	public static String nbreCaractere(String msg, int taille) {
+		int nbre;
+		do {
+			nbre = saisie(msg).length();
+		}while(nbre < taille);
+		
+		return msg;
+	}
 
 }
+
+
+
+
+
