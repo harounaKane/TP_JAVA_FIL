@@ -15,8 +15,8 @@ public class GestionPersonne {
 					4. Suppression
 					5. ...
 					0. Quitter
-					""";
-			choix = ES.saisir(str);
+					\n""";
+			choix = ES.saisir(str + "choix :");
 			switch(choix) {
 			case 1 -> affichage();
 			case 2 -> affichageParSexe();

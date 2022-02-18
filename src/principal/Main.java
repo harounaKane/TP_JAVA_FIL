@@ -1,16 +1,19 @@
 package principal;
 
 import console.ES;
+import gestionPersonne.GestionPersonne;
 
 public class Main {
 
 	public static void main(String[] args) {
 
+		GestionPersonne gestionPers= new GestionPersonne();
+		
 		int choix;
 		do {
 			choix = menuGeneral();
 			switch (choix) {
-			case 1 -> ES.afficher("Menu Personne");
+			case 1 -> gestionPers.MenuPersonne();
 			case 2 -> ES.afficher("Menu inconnu");
 		
 			}
