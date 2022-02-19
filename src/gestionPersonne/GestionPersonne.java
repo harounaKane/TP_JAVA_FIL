@@ -30,7 +30,11 @@ public class GestionPersonne {
 	}
 
 	public void suppression(TabPersonne tabPersonne) {
-		// TODO Auto-generated method stub
+		if (tabPersonne.taille() > 0) {
+			ES.afficher("Choisir l'option à supprimer" + "[0, " + (tabPersonne.taille() -1) + "]");
+			int indice = ES.saisir("Personne à supprimer:", 0, tabPersonne.taille() -1);
+			tabPersonne.supprimer(indice);
+		}
 	}
 
 	public void ajout(TabPersonne tabPersonne) {
