@@ -8,7 +8,7 @@ import metier.Sexe;
 public class TabPersonne {
 
 	private ArrayList<Personne> tabPers = new ArrayList<>();
-	
+
 	public TabPersonne() {
 		tabPers.add(new Personne(Sexe.H, "Jean", "Claude", 25));
 	}
@@ -16,7 +16,7 @@ public class TabPersonne {
 	public void ajouter(Personne personne) {
 		tabPers.add(personne);
 	}
-	
+
 	public void supprimer(int indice) {
 		tabPers.remove(indice);
 	}

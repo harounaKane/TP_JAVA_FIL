@@ -2,7 +2,9 @@ package principal;
 
 import console.ES;
 import gestionPersonne.GestionPersonne;
+import gestionPersonne.GestionVoiture;
 import structure.TabPersonne;
+import structure.TabVoiture;
 
 public class Main {
 
@@ -11,13 +13,16 @@ public class Main {
 		GestionPersonne gestionPers= new GestionPersonne();
 		
 		TabPersonne tabPersonne = new TabPersonne();
+         
+		GestionVoiture gestionVoiture = new GestionVoiture();
 		
+		TabVoiture tabVoiture = new TabVoiture();
 		int choix;
 		do {
 			choix = menuGeneral();
 			switch (choix) {
 			case 1 -> gestionPers.MenuPersonne(tabPersonne);
-			case 2 -> ES.afficher("Menu inconnu");
+			case 2 -> gestionVoiture.MenuVoiture(tabVoiture);
 		
 			}
 		}while(choix != 0);
