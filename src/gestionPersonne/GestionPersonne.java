@@ -53,8 +53,12 @@ public class GestionPersonne {
 	}
 
 	public void affichageParSexe(TabPersonne tabPersonne) {
-//		ES.saisir("perso a afficher", Integer.MAX_VALUE);
-//		ES.afficher(tabPersonne.toString());
+		String sexe;
+		do {
+			sexe = ES.saisie("Sexe (H/F)").toUpperCase();
+		} while (!sexe.equals("F") && !sexe.equals("H"));
+
+		ES.afficher(tabPersonne.parSexe(sexe).toString());
 	
 	}
 

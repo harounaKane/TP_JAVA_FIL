@@ -36,7 +36,7 @@ public class Voiture {
 		Random rand = new Random();
 		String str = "";
 		for (int i = 0; i < 7; i++) {
-			char c = (char) (rand.nextInt(7) + 'A');
+			char c = (char) (rand.nextInt(26) + 'A');
 			str = str + c;
 			// str += c ;
 
